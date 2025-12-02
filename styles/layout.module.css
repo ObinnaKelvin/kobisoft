@@ -1,0 +1,11 @@
+.bgsite {
+  background-color: #1E1E1E;
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+  overflow: hidden;
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+
+

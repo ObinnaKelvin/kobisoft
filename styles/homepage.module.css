@@ -1,0 +1,122 @@
+.glowUpButton {
+    position: relative;
+    /* border: 4px solid #B11A3D; */
+    background-color: #2D2D30
+}
+
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* .glowUpButton::after, .glowUpButton::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545, #B11A3D);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    padding: 45px;
+    translate: -50% -50%;
+    border-radius: 40px;
+    animation: fadeInOverlay 1000ms  forwards, spin 3s linear infinite;
+    will-change: opacity, transform;
+} */
+
+.glowUpButton::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545, #B11A3D);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    opacity: 0; /* start hidden on page load */
+    padding: 45px;
+    translate: -50% -50%;
+    border-radius: 40px;
+    /* fade-in to full glow, keep spin */
+    animation: fadeInOverlayAfter 10000ms forwards, spin 3s linear infinite;
+    will-change: opacity, transform;
+}
+
+.glowUpButton::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545, #B11A3D);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    opacity: 0; /* start hidden on page load */
+    padding: 45px;
+    translate: -50% -50%;
+    border-radius: 40px;
+    filter: blur(1.5rem);
+    /* fade-in to softer glow (0.5), keep spin */
+    animation: fadeInOverlayBefore 1000ms forwards, spin 3s linear infinite;
+    will-change: opacity, transform;
+}
+
+.glowUpButton::after {
+    animation: fadeInOverlayAfter 1000ms forwards, spin 3s linear infinite;
+}
+
+.glowUpButton::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+/* new keyframes for pseudo-elements fade */
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+        transform: translate(0%, 0%) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-0%, -0%) scale(1);
+    }
+}
+
+
+@keyframes fadeInOverlayAfter {
+    from {
+        opacity: 0;
+        transform: translate(0%, 0%) scale(0);
+        z-index: -1;
+    }
+    to {
+        opacity: 0.98;
+        transform: translate(-0%, -0%) scale(1);
+        
+    }
+}
+
+@keyframes fadeInOverlayBefore {
+    from {
+        opacity: 0;
+        transform: translate(0%, 0%) scale(0);
+        z-index: -1;
+    }
+    to {
+        opacity: 0.5;
+        transform: translate(-0%, -0%) scale(1);
+        z-index: -1;
+    }
+}
