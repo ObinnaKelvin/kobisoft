@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 });
 
 //components
-import ParticlesContainer from "@/dump/ParticlesContainer";
+// import ParticlesContainer from "@/dump/ParticlesContainer";
 
 //framer motion
 import { motion } from "framer-motion";
