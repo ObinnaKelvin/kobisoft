@@ -300,6 +300,11 @@ export default function Home() {
         <WhyYouNeedUs />
       </div>
 
+      {/* How we Work? */}
+      <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+        {/* <WhyYouNeedUs /> */}
+      </div>
+
     </div>
   );
 }
