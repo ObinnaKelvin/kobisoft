@@ -7,37 +7,37 @@ const clientsData = [
     {
        id: 1,
        name: 'Jet Hires',
-       icon: <Image src={'/jethires.png'} width={150} height={70} />
+       icon: <Image src={'/jethires.png'} width={150} height={70} alt= 'Jet Hires Logo' />
     },
     {
        id: 2,
        name: 'Dropeni',
-       icon: <Image src={'/dropeni.png'}width={150} height={70} />
+       icon: <Image src={'/dropeni.png'}width={150} height={70} alt= 'Dropeni Logo'/>
     },
     {
        id: 3,
        name: 'Angela',
-       icon: <Image src={'/angela.png'} width={150} height={70} />
+       icon: <Image src={'/angela.png'} width={150} height={70} alt= 'Angela Logo'/>
     },
     {
        id: 4,
        name: 'Telacore',
-       icon: <Image src={'/telacore.png'} width={150} height={70} />
+       icon: <Image src={'/telacore.png'} width={150} height={70} alt= 'Telacore Logo'/>
     },
     {
        id: 5,
        name: 'Greyscopes Urology',
-       icon: <Image src={'/greyscopes.png'} width={150} height={70} />
+       icon: <Image src={'/greyscopes.png'} width={150} height={70} alt= 'Greyscopes Urology Logo'/>
     },
     {
        id: 6,
        name: 'Dropeni',
-       icon: <Image src={'/dropeni.png'}width={150} height={70} />
+       icon: <Image src={'/dropeni.png'}width={150} height={70} alt= 'Dropeni Logo' />
     },
     {
        id: 7,
        name: 'Angela',
-       icon: <Image src={'/angela.png'} width={150} height={70} />
+       icon: <Image src={'/angela.png'} width={150} height={70} alt='Angela Logo' />
     }
 ];
 
