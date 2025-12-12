@@ -8,7 +8,7 @@ function HowWeWork() {
                 id: 1,
                 caption: 'Kickoff Meeting',
                 icon: <Image src={'/line.png'} width={60} height={60} />,
-                description: `Every great project begins here. We collaborate closely with you to understand your goals, challenges, and vision. It’s the spark that lights the journey, turning visions into an exciting digital adventure.`,
+                description: `Every great project begins here. We collaborate closely with you to understand your goals, challenges, and vision.It’s the spark that lights the journey, turning visions into an exciting digital adventure.`,
             },
             {
                 id: 2,
@@ -26,9 +26,10 @@ function HowWeWork() {
                 id: 4,
                 caption: 'Launch',
                 icon: <Image src={'/shuttle.png'} width={60} height={60} />,
-                description: 'The moment we push the big red button and watch your digital solution take flight. It’s where months of ideas, tweaks, and teamwork blast off into the world, ready to wow audiences and deliver results.',
-            }
-        ]
+                description: `The moment we push the big red button and watch your digital solution take flight. It’s where months of ideas, tweaks, and teamwork blast off into the world, ready to wow audiences and deliver results.`,
+            },
+    ]
+        
   return (
     <div className='flex flex-row gap-[20px] w-full min-h-[100px] h-max items-center justify-center '>
 
@@ -67,6 +68,7 @@ function HowWeWork() {
                                 {step.description}
                             </div>
                             <div className='bg-[#1E1E1E] absolute w-[40px] h-[40px] right-12 rounded-[50%] flex items-center justify-center border-r-[#ffffff] '>{step.id}</div>
+                          
 
                         </div>
                         <div className='flex flex-col w-[20%] justify-center items-center'>
