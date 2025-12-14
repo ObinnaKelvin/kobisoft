@@ -3,6 +3,7 @@ import Image from "next/image";
 
 //icons
 import { PiCaretRightBold } from "react-icons/pi";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 
 const faqData = [
@@ -37,7 +38,7 @@ const faqData = [
 function AccordionItem({id, question, answer}) {
   const [isOpen, setIsOpen] = React.useState(false); 
   return (
-    <div key={id} className={` flex flex-col gap-[25px] bg-[#2D2D30] rounded-[3em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}>
+    <div key={id} className={` flex flex-col gap-[25px] border-2 rounded-[2em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}>
         <div className='flex justify-between items-start cursor-pointer pt-[20px]' onClick={() => setIsOpen(!isOpen)}>
             <div className='flex items-center gap-2 justify-center font-bold relative'>
                 {/* <div>{icon}</div> */}
@@ -61,7 +62,7 @@ function AccordionItem({id, question, answer}) {
 function Faq() {
   return (
     <>
-        <div className='flex flex-col gap-3 items-center justify-center w-[80%] '>
+        <div className='flex flex-col gap-3 items-center justify-center w-[80%] mb-[80px]'>
             
 
             {/* Title Wrapper */}
@@ -87,7 +88,12 @@ function Faq() {
                     question={enquiry.question}
                     answer={enquiry.answer}
                 />
-            ))}    
+            ))}  
+
+            {/* View More   */}
+            <div className='text-[#FFFFFF] flex gap-2 items-center justify-center cursor-pointer border-2 border-[#B11A3D] px-[40px] py-[10px] rounded-[12px] mt-[10px]'>
+                <div>View More</div> <div className='text-[45px]'><HiOutlineArrowLongRight /></div> 
+            </div>
         </div>
     </>
   )
