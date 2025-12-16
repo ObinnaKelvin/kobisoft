@@ -26,6 +26,7 @@ import WhyYouNeedUs from "@/components/WhyYouNeedUs";
 import HowWeWork from "@/components/HowWeWork";
 import Faq from "@/components/Faq";
 import LaunchBanner from "@/components/LaunchBanner";
+import Footer from "@/components/Footer";
 
 //css const
 // const glowcss = `${style.glowUpButton} flex items-center justify-center bg-[#2D2D30] 
@@ -316,6 +317,11 @@ export default function Home() {
       {/* Launch Banner Section */}
       <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
         <LaunchBanner />
+      </div>
+
+      {/* Footer Section */}
+      <div className="flex flex-col h-max w-full gap-10 items-center justify-center ">
+        <Footer />
       </div>
 
     </div>

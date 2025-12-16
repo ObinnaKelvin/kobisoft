@@ -19,7 +19,7 @@ const Layout = ({children}) => {
   return ( 
     // <div className={`page bg-site  text-black` }>
     <div className={style.bgsite}>
-      <TopLeftImg />
+      {/* <TopLeftImg /> */}
       <Nav />
       <Header />
       {children}
