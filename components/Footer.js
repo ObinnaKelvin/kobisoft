@@ -22,9 +22,9 @@ function Footer() {
         {/* Privacy Policy . Terms & Conditions . Refund Policy */}
 
         <div className='flex flex-row items-center justify-center gap-5 text-[#FFFFFF] text-[14px]'>
-            <div className='cursor-pointer hover:underline'>Privacy Policy</div>
-            <div className='cursor-pointer hover:underline'>Terms & Conditions</div>
-            <div className='cursor-pointer hover:underline'>Refund Policy</div>
+            <Link href={'/privacy'} className='cursor-pointer hover:underline'>Privacy Policy</Link>
+            <Link href={'/terms'} className='cursor-pointer hover:underline'>Terms & Conditions</Link>
+            <Link href={'/refund'} className='cursor-pointer hover:underline'>Refund Policy</Link>
         </div>
 
         {/* Social Media Links Here */}

@@ -62,7 +62,7 @@ function AccordionItem({id, question, answer}) {
 function Faq() {
   return (
     <>
-        <div className=''>
+        <div className='flex flex-col gap-3 items-center justify-center w-[80%] mb-[80px]'>
             
 
             {/* Title Wrapper */}
