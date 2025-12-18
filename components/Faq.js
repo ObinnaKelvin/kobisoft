@@ -2,7 +2,8 @@ import React from 'react'// next image
 import Image from "next/image";
 
 //icons
-import { PiCaretRightBold } from "react-icons/pi";
+// import { PiCaretRightBold } from "react-icons/pi";
+import { HiOutlinePlus } from "react-icons/hi";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 
@@ -47,7 +48,7 @@ function AccordionItem({id, question, answer}) {
                 {/* <div className="bg-[#B11A3D] w-[30px] h-[3px] xl:w-[30px] xl:h-[3px] absolute left-11 bottom-0"></div> */}
 
             </div>
-            <div className={`transition-all duration-300 ${isOpen ? 'rotate-90' : ''}`}><PiCaretRightBold /></div>
+            <div className={`transition-all duration-300 ${isOpen ? 'rotate-45' : ''} text-[30px] text-[#B11A3D]`}><HiOutlinePlus /></div>
         </div>
 
         <div className={`pb-5 w-[80%] overflow-hidden transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 h-0'}`}>

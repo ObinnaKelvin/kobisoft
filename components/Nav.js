@@ -8,13 +8,15 @@ import {
   HiEnvelope,
 } from 'react-icons/hi2';
 
+import { GrInfo } from "react-icons/gr";
+
 
 import style from "@/styles/navbar.module.css";
 
 // nav data
 export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
-  { name: 'about', path: '/about', icon: <HiUser /> },
+  { name: 'about', path: '/about', icon: <GrInfo /> },
   { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
   {

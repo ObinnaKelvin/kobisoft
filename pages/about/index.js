@@ -34,6 +34,9 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+import Faq from "@/components/Faq";
+import TrustedBy from "@/components/TrustedBy";
+import LaunchBanner from "@/components/LaunchBanner";
 
 
 //  data
@@ -220,8 +223,23 @@ const About = () => {
                               </div>
                         </div>
 
+                        {/* TrustedBy Section */}
+                        <TrustedBy />
+
+                        {/* FAQs Section */}
+                        <Faq />
+
 
                     </div>
+
+                    {/* Launch Banner */}
+                    <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px] pt-[60px]">
+                      <LaunchBanner />
+                    </div>
+
+
+                    {/* Footer */}
+                    <Footer />
               
           </div>
   );

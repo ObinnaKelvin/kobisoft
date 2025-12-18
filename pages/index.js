@@ -262,7 +262,7 @@ export default function Home() {
       {/* Services We Offer */}
 
       {/* Services-container */}
-      <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+      <div id="services" className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
 
         <div className="xl:w-[80%] flex flex-col items-center justify-center relative">
 
