@@ -4,7 +4,7 @@ import React from 'react'
 import Image from "next/image";
 
 //icons
-import { PiCaretRightBold } from "react-icons/pi";
+import { HiOutlinePlus } from "react-icons/hi";
 
 
 const servicesData = [
@@ -64,7 +64,7 @@ function AccordionItem({id, title, icon, description, tags}) {
                 <div className="bg-[#B11A3D] w-[30px] h-[3px] xl:w-[30px] xl:h-[3px] absolute left-11 bottom-0"></div>
 
             </div>
-            <div className={`transition-all duration-300 ${isOpen ? 'rotate-90' : ''}`}><PiCaretRightBold /></div>
+            <div className={`transition-all duration-300 ${isOpen ? 'rotate-45' : ''} text-[40px] text-[#B11A3D]`}><HiOutlinePlus /></div>
         </div>
 
         <div className={`pb-5 w-[400px] overflow-hidden transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 h-0'}`}>
@@ -85,7 +85,7 @@ function ServicesAccordion() {
 
   return (
     <>
-        <div className='flex flex-col gap-3 items-center justify-center w-full '>
+        <div className='flex flex-col gap-3 items-center justify-center w-full xl:h-max py-[50px] '>
             {servicesData.map((service) => (
                 <AccordionItem 
                     key={service.id}
