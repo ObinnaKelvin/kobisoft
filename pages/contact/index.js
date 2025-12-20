@@ -97,7 +97,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col">
                   <span className='text-white mb-2'>Location *</span>
-                  <input type="text" placeholder="Country" className='bg-[#2D2D30] rounded-[12px] px-[20px] py-[10px] text-white focus:outline outline-[#ffffff50]' />
+                  <input type="text" placeholder="Country & Your business address" className='bg-[#2D2D30] rounded-[12px] px-[20px] py-[10px] text-white focus:outline outline-[#ffffff50]' />
                 </div>
                 <div className="flex flex-col">
                   <span className='text-white mb-2'>Message *</span>
@@ -105,7 +105,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-row gap-2">
                   <input type="checkbox" className='w-[20px] h-[20px] accent-[#B11A3D]' />
-                  <div>I agree to the privacy policy</div>
+                  <div>I agree to the <Link href={'/privacy'} className='cursor-pointer text-[#B11A3D] hover:underline hover:text-[#B11A3D]'>Privacy Policy.</Link></div>
                 </div>
                 <button type="submit" className='bg-[#B11A3D] text-white font-semibold rounded-[3em] px-[20px] py-[10px] hover:bg-[#9e1530] transition-colors duration-300'>Send Message</button>
 
