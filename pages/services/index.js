@@ -1,7 +1,7 @@
 
 
 // google fonts
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 
 
@@ -104,7 +104,7 @@ const Services = () => {
               </div>
           </motion.div>
 
-          {/* Privacy terms Content */}
+          {/* Services Content */}
           <div className='w-full z-3 h-max gap-[20px] mt-[-40px]'>
               <ServicesAccordion  />
 
