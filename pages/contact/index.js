@@ -33,6 +33,7 @@ import {
   RxRocket,
   RxPencil2,
 } from 'react-icons/rx'
+import Link from "next/link";
 
 
 
@@ -77,7 +78,12 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form Here */}
-          <div className='w-full z-3 h-max gap-[20px] mt-[-40px] mb-[50px]'>
+          <motion.div 
+              variants={fadeIn('up', 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className='w-full z-3 h-max gap-[20px] mt-[-40px] mb-[50px]'>
               <form className='flex flex-col gap-5 border-2 border-[#2D2D30] bg-[#1E1E1E] rounded-[2em] px-[50px] py-[50px] w-[80%] mx-auto'>
                 <div className="flex flex-col">
                   <span className='text-white mb-2'>Full Name *</span>
@@ -110,7 +116,7 @@ const Contact = () => {
                 <button type="submit" className='bg-[#B11A3D] text-white font-semibold rounded-[3em] px-[20px] py-[10px] hover:bg-[#9e1530] transition-colors duration-300'>Send Message</button>
 
               </form>
-          </div>
+          </motion.div>
 
 
       </div>
