@@ -138,7 +138,7 @@ function StartHere() {
                         <option value='$1,000 - $10,000'>$1,000 - $10,000</option>
                         <option value='$10,000 - $50,000'>$10,000 - $50,000</option>
                         <option value='$50,000 - $100,000'>$50,000 - $100,000</option>
-                        <option value='not_sure'>Not sure, let's talk first</option>
+                        <option value='not_sure'>Not sure, let&apos;s talk first</option>
                     </select>
                 </div>
                 <div className="flex flex-col">
