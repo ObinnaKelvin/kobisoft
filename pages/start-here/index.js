@@ -122,23 +122,23 @@ function StartHere() {
                   <span className='text-white mb-2'>Project/Service Type *</span>
                     <select name="servicetype" id="servicetype"  className='bg-[#2D2D30] rounded-[12px] px-[20px] py-[10px] text-white focus:outline outline-[#ffffff50]'>
                         <option value="">Select One</option>
-                        <option value="Branding & Identity">Branding & Identity</option>
-                        <option value="Creative Design">Creative Design</option>
-                        <option value="Digital Market">Digital Market</option>
-                        <option value="Social Media Management">Social Media Management</option>
-                        <option value="Video & Motion Design">Video & Motion Design</option>
-                        <option value="Website Design & Development">Website Design & Development</option>
-                        <option value="App Design & Development">App Design & Development</option>
+                        <option value='Branding & Identity'>Branding & Identity</option>
+                        <option value='Creative Design'>Creative Design</option>
+                        <option value='Digital Market'>Digital Market</option>
+                        <option value='Social Media Management'>Social Media Management</option>
+                        <option value='Video & Motion Design'>Video & Motion Design</option>
+                        <option value='Website Design & Development'>Website Design & Development</option>
+                        <option value='App Design & Development'>App Design & Development</option>
                     </select>
                 </div>
                 <div className="flex flex-col">
                   <span className='text-white mb-2'>Budget Range *</span>
                     <select name="budgetrange" id="budgetrange"  className='bg-[#2D2D30] rounded-[12px] px-[20px] py-[10px] text-white focus:outline outline-[#ffffff50]'>
                         <option value="">Select One</option>
-                        <option value="$1,000 - $10,000">$1,000 - $10,000</option>
-                        <option value="$10,000 - $50,000">$10,000 - $50,000</option>
-                        <option value="$50,000 - $100,000">$50,000 - $100,000</option>
-                        <option value="not_sure">Not sure, let's talk first</option>
+                        <option value='$1,000 - $10,000'>$1,000 - $10,000</option>
+                        <option value='$10,000 - $50,000'>$10,000 - $50,000</option>
+                        <option value='$50,000 - $100,000'>$50,000 - $100,000</option>
+                        <option value='not_sure'>Not sure, let's talk first</option>
                     </select>
                 </div>
                 <div className="flex flex-col">
