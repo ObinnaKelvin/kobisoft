@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
+import { motion, useScroll } from 'framer-motion'
 
 function HowWeWork() {
 
@@ -29,12 +30,22 @@ function HowWeWork() {
                 description: `The moment we push the big red button and watch your digital solution take flight. It’s where months of ideas, tweaks, and teamwork blast off into the world, ready to wow audiences and deliver results.`,
             },
     ]
+
+    const ref = useRef(null);
+    const {scrollYProgress} = useScroll(
+        {
+            target: ref,
+            offset: ["start end", "center start"]
+        }
+    );
         
   return (
+
     <div className='flex flex-row gap-[20px] w-full min-h-[100px] h-max items-center justify-center '>
 
         <div className="xl:w-[80%] flex flex-col items-center justify-center relative 
-            gap-[20px]">
+            gap-[20px] border-2"
+            ref={ref}>
 
             {/* Title Wrapper */}
             <div className=' flex flex-col text-white
@@ -46,11 +57,22 @@ function HowWeWork() {
             mb-[40px]
             pt-[20px]
             '>
-                <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[70px] xl:h-[5px]"></div>
+                <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[70px] xl:h-[5px]" ></div>
                 How We Work ?
             </div>
 
             {/* Work Step Items */}
+
+            {/* Vertical Scroll Line */}
+            <motion.div 
+            style={{
+                scaleY: scrollYProgress
+            }}
+            className='absolute  
+            xl:right-[18%]
+            w-[4px] 
+            h-[70%] 
+            bg-[#B11A3D] origin-top z-[1]'/>
 
             {
                 workStepData.map((step, index) => (
@@ -71,7 +93,7 @@ function HowWeWork() {
                           
 
                         </div>
-                        <div className='flex flex-col w-[20%] justify-center items-center'>
+                        <div className='flex flex-col w-[20%] justify-center items-center  z-1'>
                                 <div className='bg-[#2D2D30] flex flex-col py-[30px] px-[30px] rounded-[50%]'>
                                     {step.icon}
                                 </div>
