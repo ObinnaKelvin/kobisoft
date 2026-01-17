@@ -1,0 +1,8 @@
+.glowButton {
+    background-color: #B11A3D;
+    border: 5px solid #B11A3D;
+    border-radius: 50%;
+    padding: 30px;
+    position: absolute;
+    box-shadow: 0 0 15px #B11A3D;
+}

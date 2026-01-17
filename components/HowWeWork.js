@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useScroll } from 'framer-motion'
+import { GlowButton, GlowCircle } from './Buttons';
 
 function HowWeWork() {
 
@@ -32,6 +33,7 @@ function HowWeWork() {
     ]
 
     const ref = useRef(null);
+    const secondRef = useRef(null);
     const {scrollYProgress} = useScroll(
         {
             target: ref,
@@ -44,7 +46,7 @@ function HowWeWork() {
     <div className='flex flex-row gap-[20px] w-full min-h-[100px] h-max items-center justify-center '>
 
         <div className="xl:w-[80%] flex flex-col items-center justify-center relative 
-            gap-[20px] border-2"
+            gap-[20px] "
             ref={ref}>
 
             {/* Title Wrapper */}
@@ -93,10 +95,15 @@ function HowWeWork() {
                           
 
                         </div>
-                        <div className='flex flex-col w-[20%] justify-center items-center  z-1'>
-                                <div className='bg-[#2D2D30] flex flex-col py-[30px] px-[30px] rounded-[50%]'>
+                        <div ref={secondRef} className='flex flex-col w-[20%] justify-center items-center  z-1'>
+                                <div className='bg-[#2D2D30] flex flex-col py-[30px] px-[30px] rounded-[50%] z-1'>
                                     {step.icon}
                                 </div>
+                                {/* <div className='bg-[#B11A3D] absolute py-[30px] px-[30px] rounded-[50%] border-[5px] border-[#B11A3D]'>
+                                    {step.icon}
+                                </div> */}
+                                {/* <GlowButton reference={ref} /> */}
+                                <GlowCircle reference={ref} />
                         </div>
                     </div>
 
