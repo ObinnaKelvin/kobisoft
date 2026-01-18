@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import CountUp from 'react-countup';
+import { motion } from 'framer-motion'
 
 function WhyYouNeedUs() {
 
@@ -86,7 +87,13 @@ function WhyYouNeedUs() {
 
             {
                 needUsData.map((item) => (
-                        <div key={item.id} className='flex flex-row xl:flex-row md:flex-col sm:flex-col justify-center items-center w-[80%] border-2 px-[50px] py-[40px] rounded-[3em]'>
+                        <motion.div 
+                            key={item.id} 
+                            className='flex flex-row xl:flex-row md:flex-col sm:flex-col justify-center items-center w-[80%] border-2 px-[50px] py-[40px] rounded-[3em]'
+                            initial={{ y: 50 }}
+                            whileInView={{ y: 0 }}
+                            transition={{ duration: 0.7, type: "spring",  bounce: 0.25}}
+                            >
                             <div className='flex flex-col gap-2.5'>
                                 {item.icon}
                                 <div className='text-[20px] font-semibold'>{item.title}</div>
@@ -98,7 +105,7 @@ function WhyYouNeedUs() {
                                 <div className='text-[80px] font-bold'><CountUp end={item.stat} enableScrollSpy={true} duration={2}/><span className='text-[35px]'>{item.measure}</span></div>
                                 <div className='text-[20px] mt-[-25px]'>{item.statLabel}</div>
                             </div>
-                        </div>
+                        </motion.div>
 
                 ))
             }

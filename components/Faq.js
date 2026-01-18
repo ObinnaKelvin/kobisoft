@@ -1,5 +1,6 @@
 import React from 'react'// next image
 import Image from "next/image";
+import { motion } from 'framer-motion'
 
 //icons
 // import { PiCaretRightBold } from "react-icons/pi";
@@ -39,7 +40,13 @@ const faqData = [
 function AccordionItem({id, question, answer}) {
   const [isOpen, setIsOpen] = React.useState(false); 
   return (
-    <div key={id} className={` flex flex-col gap-[25px] border-2 rounded-[2em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}>
+    <motion.div 
+        key={id} 
+        className={` flex flex-col gap-[25px] border-2 rounded-[2em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.7, type: "spring"}}
+        >
         <div className='flex justify-between items-start cursor-pointer pt-[20px]' onClick={() => setIsOpen(!isOpen)}>
             <div className='flex items-center gap-2 justify-center font-bold relative'>
                 {/* <div>{icon}</div> */}
@@ -55,7 +62,7 @@ function AccordionItem({id, question, answer}) {
             <div>{answer}</div>
         </div>
 
-    </div>)
+    </motion.div>)
 }
 
 

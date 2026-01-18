@@ -79,7 +79,9 @@ function HowWeWork() {
             {
                 workStepData.map((step, index) => (
 
-                    <div key={step.id} className='flex flex-row gap-[20px] w-[80%]'>
+                    <div key={step.id} 
+                        className='flex flex-row gap-[20px] w-[80%]'>
+
                         <div className='flex flex-col relative 
                         py-[40px] px-[50px]
                         w-[80%] xl:w-[80%]
