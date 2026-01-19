@@ -27,6 +27,7 @@ import HowWeWork from "@/components/HowWeWork";
 import Faq from "@/components/Faq";
 import LaunchBanner from "@/components/LaunchBanner";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 //css const
 // const glowcss = `${style.glowUpButton} flex items-center justify-center bg-[#2D2D30] 
@@ -59,6 +60,7 @@ export const metadata = {
 
 export default function Home() {
   return (
+
     // <div
     //   className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
     // >
@@ -158,172 +160,182 @@ export default function Home() {
     //   </footer>
     // </div>
 
-    // Container
-    <div className="flex flex-col h-max relative items-center justify-center top-0">
+    <>
+          <Head>
+            <title>Home - Kobisoft Digitals</title>
+            <meta name="description" content="Kobisoft Digitals is a leading digital solutions agency dedicated to creating impactful online experiences through creativity, strategy, and technology." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/siteicon.ico" />
+          </Head>
 
-      <div className="bg-primary/60 h-screen relative flex flex-col items-center justify-center">
-      
-      
-        {/* Blur Effect */}
-        <div className="flex items-center w-screen h-screen justify-center absolute top-0">
-          <div className="bg-[#B11A3D] h-[350px] w-[750px] rounded-[50%] z-1 blur-2xl"></div>
-          <div className="bg-[#ffffff] opacity-4 w-screen h-full absolute z-2"></div>
-        </div>
+        {/* // Container */}
+        <div className="flex flex-col h-max relative items-center justify-center top-0">
 
-        {/* hero section */}
-        <motion.div 
-          variants={fadeIn('down', 0.2)}
-          initial="hidden"
-          className="flex flex-col gap-[20px] bg-[#00000060] 
-          xl:bg-[#00000060] w-[80%] h-max z-3 rounded-[30px] 
-          pl-[15px] pt-[50px] pr-[10px] pb-[50px] 
-          xl:pl-[70px] xl:pt-[50px] xl:pr-[70px] xl:pb-[50px]"
-          animate="show"
-          exit="hidden">
-
-          {/* pane */}
-          <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[100px] xl:h-[6px]"></div>
-          {/* text */}
-          <div className="font-thin
-          xl:text-[45px] xl:w-[50%] 
-          lg:text-[40px] lg:w-[50%] 
-          md:text-[40px] md:w-[70%]
-          text-[23px] w-[90%] 
-          mb-[40px]
+          <div className="bg-primary/60 h-screen relative flex flex-col items-center justify-center">
           
-          ">
-            {/* title */}
-              Building brands and digital solutions that drive business growth.
+          
+            {/* Blur Effect */}
+            <div className="flex items-center w-screen h-screen justify-center absolute top-0">
+              <div className="bg-[#B11A3D] h-[350px] w-[750px] rounded-[50%] z-1 blur-2xl"></div>
+              <div className="bg-[#ffffff] opacity-4 w-screen h-full absolute z-2"></div>
+            </div>
+
+            {/* hero section */}
+            <motion.div 
+              variants={fadeIn('down', 0.2)}
+              initial="hidden"
+              className="flex flex-col gap-[20px] bg-[#00000060] 
+              xl:bg-[#00000060] w-[80%] h-max z-3 rounded-[30px] 
+              pl-[15px] pt-[50px] pr-[10px] pb-[50px] 
+              xl:pl-[70px] xl:pt-[50px] xl:pr-[70px] xl:pb-[50px]"
+              animate="show"
+              exit="hidden">
+
+              {/* pane */}
+              <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[100px] xl:h-[6px]"></div>
+              {/* text */}
+              <div className="font-thin
+              xl:text-[45px] xl:w-[50%] 
+              lg:text-[40px] lg:w-[50%] 
+              md:text-[40px] md:w-[70%]
+              text-[23px] w-[90%] 
+              mb-[40px]
+              
+              ">
+                {/* title */}
+                  Building brands and digital solutions that drive business growth.
+              </div>
+
+              {/* button */}
+              <motion.div 
+                variants={fadeIn('down', 0.2)}
+                // initial="hidden"
+                initial="show"
+                animate="show"
+                // exit="hidden"
+                className={`${style.glowUpButton} flex items-center justify-center bg-[#2D2D30] 
+                            xl:w-[239px] xl:h-[87px] 
+                            lg:w-[239px] lg:h-[87px] 
+                            xmd:w-[239px] xmd:h-[87px] 
+                            md:w-[239px] md:h-[87px] 
+                            w-[239px] h-[87px] 
+                            
+                            rounded-[40px]  cursor-pointer`}>
+                            GET STARTED
+              </motion.div>
+
+
+
+
+            </motion.div>
+
+            {/* Avatar Img */}
+            <motion.div 
+              variants={fadeIn('up', 0.4)}
+              className=" flex absolute z-5 right-[150px]" 
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              transition={{duration: 1, ease: 'easeInOut'}}>
+              <Avatar/>
+            </motion.div>
+
+
           </div>
 
-          {/* button */}
-          <motion.div 
-            variants={fadeIn('down', 0.2)}
-            // initial="hidden"
-            initial="show"
-            animate="show"
-            // exit="hidden"
-            className={`${style.glowUpButton} flex items-center justify-center bg-[#2D2D30] 
-                        xl:w-[239px] xl:h-[87px] 
-                        lg:w-[239px] lg:h-[87px] 
-                        xmd:w-[239px] xmd:h-[87px] 
-                        md:w-[239px] md:h-[87px] 
-                        w-[239px] h-[87px] 
-                        
-                        rounded-[40px]  cursor-pointer`}>
-                         GET STARTED
-          </motion.div>
 
 
+          {/* Particles */}
+          {/* <ParticlesContainer /> */}
 
 
-        </motion.div>
+          {/* Trusted By */}
 
-        {/* Avatar Img */}
-        <motion.div 
-          variants={fadeIn('up', 0.4)}
-          className=" flex absolute z-5 right-[150px]" 
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          transition={{duration: 1, ease: 'easeInOut'}}>
-          <Avatar/>
-        </motion.div>
+          <div className=" h-[400px] w-full flex flex-col items-center gap-10 p-[30px]">
 
+            {/* Title */}
+            <div className="
+            text-[20px]
+            xl:text-[25px]
+            lg:text-[25px] 
+            md:text-[25px]
+            ">
+              Trusted By
+            </div>
 
-      </div>
-
-
-
-      {/* Particles */}
-      {/* <ParticlesContainer /> */}
+            {/* Trusted Clients Container */}
+            <TrustedBy />
 
 
-      {/* Trusted By */}
-
-      <div className=" h-[400px] w-full flex flex-col items-center gap-10 p-[30px]">
-
-        {/* Title */}
-        <div className="
-        text-[20px]
-        xl:text-[25px]
-        lg:text-[25px] 
-        md:text-[25px]
-        ">
-          Trusted By
-        </div>
-
-        {/* Trusted Clients Container */}
-        <TrustedBy />
-
-
-      </div>
-
-      {/* Services We Offer */}
-
-      {/* Services-container */}
-      <div id="services" className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
-
-        <div className="xl:w-[80%] flex flex-col items-center justify-center relative">
-
-          {/* text */}
-          <div className="flex flex-col font-thin
-          xl:text-[65px] xl:w-[80%] 
-          lg:text-[40px] lg:w-[50%] 
-          md:text-[40px] md:w-[70%]
-          text-[23px] w-[90%] 
-          mb-[40px]
-          pt-[20px]">
-            {/* title */}
-            {/* pane */}
-            <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[70px] xl:h-[5px]"></div>
-              Services
           </div>
 
-          {/* Service-Items */}
-          {/* <div className="flex flex-col gap-10"> */}
-            <ServicesAccordion  />
-          {/* </div> */}
+          {/* Services We Offer */}
 
+          {/* Services-container */}
+          <div id="services" className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+
+            <div className="xl:w-[80%] flex flex-col items-center justify-center relative">
+
+              {/* text */}
+              <div className="flex flex-col font-thin
+              xl:text-[65px] xl:w-[80%] 
+              lg:text-[40px] lg:w-[50%] 
+              md:text-[40px] md:w-[70%]
+              text-[23px] w-[90%] 
+              mb-[40px]
+              pt-[20px]">
+                {/* title */}
+                {/* pane */}
+                <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[70px] xl:h-[5px]"></div>
+                  Services
+              </div>
+
+              {/* Service-Items */}
+              {/* <div className="flex flex-col gap-10"> */}
+                <ServicesAccordion  />
+              {/* </div> */}
+
+
+            </div>
+
+
+
+          </div>
+
+          {/* Skill Tags */}
+
+          {/* Skill-tag-container */}
+          <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+            <Skills />
+          </div>
+
+          {/* Why You Need Us */}
+          <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+            <WhyYouNeedUs />
+          </div>
+
+          {/* How we Work? */}
+          <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+            <HowWeWork />
+          </div>
+
+          {/* Frequently asked question */}
+          <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+            <Faq />
+          </div>
+
+          {/* Launch Banner Section */}
+          <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
+            <LaunchBanner />
+          </div>
+
+          {/* Footer Section */}
+          <div className="flex flex-col h-max w-full gap-10 items-center justify-center ">
+            <Footer />
+          </div>
 
         </div>
+  </>
 
-
-
-      </div>
-
-      {/* Skill Tags */}
-
-      {/* Skill-tag-container */}
-      <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
-        <Skills />
-      </div>
-
-      {/* Why You Need Us */}
-      <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
-        <WhyYouNeedUs />
-      </div>
-
-      {/* How we Work? */}
-      <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
-        <HowWeWork />
-      </div>
-
-      {/* Frequently asked question */}
-      <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
-        <Faq />
-      </div>
-
-      {/* Launch Banner Section */}
-      <div className="flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px]">
-        <LaunchBanner />
-      </div>
-
-      {/* Footer Section */}
-      <div className="flex flex-col h-max w-full gap-10 items-center justify-center ">
-        <Footer />
-      </div>
-
-    </div>
   );
 }

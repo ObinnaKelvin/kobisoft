@@ -37,6 +37,7 @@ import Footer from '@/components/Footer';
 import Faq from "@/components/Faq";
 import TrustedBy from "@/components/TrustedBy";
 import LaunchBanner from "@/components/LaunchBanner";
+import Head from "next/head";
 
 
 //  data
@@ -113,6 +114,13 @@ import LaunchBanner from "@/components/LaunchBanner";
 
 const About = () => {
   return (
+      <>
+          <Head>
+            <title>About Us - Kobisoft Digitals</title>
+            <meta name="description" content="Learn more about Kobisoft Digitals, a leading digital solutions agency dedicated to creating impactful online experiences through creativity, strategy, and technology." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/siteicon.ico" />
+          </Head>
           <div className="flex flex-col h-max relative items-center justify-center top-0">
 
                     {/* <div>We’re a digital solutions agency built for brands that want more than just an online presence—they want impact. 🚀
@@ -242,6 +250,7 @@ const About = () => {
                     <Footer />
               
           </div>
+      </>
   );
 };
 

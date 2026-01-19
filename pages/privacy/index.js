@@ -17,6 +17,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+import Head from 'next/head';
 
 
 const policyData = [
@@ -60,67 +61,75 @@ const policyData = [
 
 function Privacy() {
   return (
-    <div className='flex flex-col h-max relative items-center justify-center top-0'>
+    <>
+        <Head>
+        <title>Privacy Policy - Kobisoft Digitals</title>
+        <meta name="description" content="Kobisoft Digitals Privacy Policy" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/siteicon.ico" />
+        </Head>
+        <div className='flex flex-col h-max relative items-center justify-center top-0'>
 
-        {/* Hero Section */}
+            {/* Hero Section */}
 
-        {/* Blur Effect */}
-        <div className="flex items-center w-screen h-screen justify-center absolute top-0">
-          <div className="bg-[#B11A3D] h-[350px] w-[750px] rounded-[50%] z-1 blur-2xl ml-[-500px]"></div>
-          <div className="bg-[#ffffff] opacity-4 w-screen h-full absolute z-2"></div>
-        </div>
+            {/* Blur Effect */}
+            <div className="flex items-center w-screen h-screen justify-center absolute top-0">
+            <div className="bg-[#B11A3D] h-[350px] w-[750px] rounded-[50%] z-1 blur-2xl ml-[-500px]"></div>
+            <div className="bg-[#ffffff] opacity-4 w-screen h-full absolute z-2"></div>
+            </div>
 
-        {/* hero section */}
+            {/* hero section */}
 
-        <div className="flex flex-col items-center bg-[#00000060] 
-                xl:bg-[#00000060] gap-[20px] w-full  z-3 relative">
+            <div className="flex flex-col items-center bg-[#00000060] 
+                    xl:bg-[#00000060] gap-[20px] w-full  z-3 relative">
 
-            <motion.div 
-                variants={fadeIn('down', 0.2)}
-                initial="hidden"
-                className="flex flex-col gap-[20px] w-[80%] h-max z-3
-                pl-[0px] pt-[50px] pr-[0px] pb-[50px] 
-                xl:pl-[0px] xl:pt-[150px] xl:pr-[0px] xl:pb-[50px] "
-                animate="show"
-                exit="hidden">
+                <motion.div 
+                    variants={fadeIn('down', 0.2)}
+                    initial="hidden"
+                    className="flex flex-col gap-[20px] w-[80%] h-max z-3
+                    pl-[0px] pt-[50px] pr-[0px] pb-[50px] 
+                    xl:pl-[0px] xl:pt-[150px] xl:pr-[0px] xl:pb-[50px] "
+                    animate="show"
+                    exit="hidden">
 
-                {/* pane */}
-                <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[100px] xl:h-[6px]"></div>
-                {/* text */}
-                <div className="font-thin
-                    xl:text-[45px] xl:w-[50%] xl:font-light
-                    lg:text-[40px] lg:w-[50%] 
-                    md:text-[40px] md:w-[70%]
-                    text-[23px] w-[90%] 
-                    ">
-                    {/* title */}
-                    Privacy Policy
-                </div>
-                <div className='flex gap-3 w-max bg-[#2D2D30] py-[15px] px-[30px] rounded-[3em]'>
-                    <Image className='cursor-pointer' src="/time.png" alt="time" width={30} height={30} />
-                    <div className='text-[#ffffff90]'>Last Updated on September 24, 2025</div>
-                </div>
-            </motion.div>
-
-            {/* Privacy Policy Content */}
-            <div className='w-[80%] z-3 h-max gap-[20px] mt-[-70px]'>
-
-                {policyData.map((policy) => (
-                    <div key={policy.id} className='flex flex-col gap-3 my-[30px] bg-[#2D2D30] h-max rounded-[3em] px-[50px] py-[50px]'>
-                        <div className='text-white font-semibold text-[20px]'>{policy.title}</div>
-                        <div className='text-white font-light text-[16px]'>{policy.content}</div>
+                    {/* pane */}
+                    <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[100px] xl:h-[6px]"></div>
+                    {/* text */}
+                    <div className="font-thin
+                        xl:text-[45px] xl:w-[50%] xl:font-light
+                        lg:text-[40px] lg:w-[50%] 
+                        md:text-[40px] md:w-[70%]
+                        text-[23px] w-[90%] 
+                        ">
+                        {/* title */}
+                        Privacy Policy
                     </div>
-                ))}
+                    <div className='flex gap-3 w-max bg-[#2D2D30] py-[15px] px-[30px] rounded-[3em]'>
+                        <Image className='cursor-pointer' src="/time.png" alt="time" width={30} height={30} />
+                        <div className='text-[#ffffff90]'>Last Updated on September 24, 2025</div>
+                    </div>
+                </motion.div>
+
+                {/* Privacy Policy Content */}
+                <div className='w-[80%] z-3 h-max gap-[20px] mt-[-70px]'>
+
+                    {policyData.map((policy) => (
+                        <div key={policy.id} className='flex flex-col gap-3 my-[30px] bg-[#2D2D30] h-max rounded-[3em] px-[50px] py-[50px]'>
+                            <div className='text-white font-semibold text-[20px]'>{policy.title}</div>
+                            <div className='text-white font-light text-[16px]'>{policy.content}</div>
+                        </div>
+                    ))}
+
+                </div>
 
             </div>
 
+
+            {/* Footer */}
+            <Footer />
+            
         </div>
-
-
-        {/* Footer */}
-        <Footer />
-        
-    </div>
+    </>
   )
 }
 
