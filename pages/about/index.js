@@ -170,7 +170,11 @@ const About = () => {
                         </motion.div>
 
                         {/* Privacy terms Content */}
-                        <div className='w-[80%] z-3 h-max gap-[20px] mt-[-70px]'>
+                        <motion.div 
+                          initial={{y:200}}
+                          whileInView={{y:0, transition:{duration:1.5, ease:"easeInOut"}}}
+                          viewport={{once: true}}
+                          className='w-[80%] z-3 h-max gap-[20px] mt-[-70px]'>
                                 <div className='flex flex-col gap-3 my-[30px] bg-[#2D2D30] h-max rounded-[3em] px-[50px] py-[50px]'>
                                     {/* <div className='text-white font-semibold text-[20px]'>{refund.title}</div> */}
                                     <div className='text-white font-light text-[16px]'>
@@ -178,12 +182,16 @@ const About = () => {
                                         At Kobisoft Digitals, we believe great digital products are born from collaboration, adaptability, and a deep understanding of business goals. That’s why we partner closely with our clients, stay flexible in a fast-moving digital world, and focus on results that drive real growth.               
                                     </div>
                                 </div>
-                        </div>
+                        </motion.div>
 
                         {/* Misson Statement */}
 
                         <div className='flex flex-row w-[80%] z-3 gap-[30px] mt-[-20px] h-[310px] relative mb-[100px]'>
-                              <div className="flex flex-col flex-1 bg-[#B11A3D] px-[30px] py-[50px] gap-[18px]">
+                              <motion.div 
+                                initial={{y:200}}
+                                whileInView={{y:0, transition:{duration:2, ease:"easeInOut"}}}
+                                viewport={{once: true}} 
+                                className="flex flex-col flex-1 bg-[#B11A3D] px-[30px] py-[50px] gap-[18px]">
                                 <div className="">
                                   <Image src={'/binoculars.png'} width={40} height={80} />
                                 </div>
@@ -196,9 +204,13 @@ const About = () => {
                                   Your vision is the destination, we build the digital roadmap. From strategy to execution, we help businesses embrace innovation, optimize processes, and 
                                   scale for the future. Let’s turn your big picture into a reality.
                                 </div>
+                              </motion.div>
 
-                              </div>
-                              <div className="flex flex-col flex-1 bg-[#2D2D30] px-[30px] py-[50px] gap-[18px]">
+                              <motion.div 
+                                initial={{y:200}}
+                                whileInView={{y:0, transition:{duration:2.3, ease:"easeInOut"}}}
+                                viewport={{once: true}} 
+                                className="flex flex-col flex-1 bg-[#2D2D30] px-[30px] py-[50px] gap-[18px]">
                                 <div className="">
                                   <Image src={'/shuttle.png'} width={40} height={80} />
                                 </div>
@@ -211,8 +223,13 @@ const About = () => {
                                   From concept to creation, we turn your ideas into sleek, user-focused product 
                                   designs that your customers will love. Innovation starts here.
                                 </div>
-                              </div>
-                              <div className="flex flex-col flex-1 bg-[#2D2D30] px-[30px] py-[50px] gap-[18px]">
+                              </motion.div>
+
+                              <motion.div 
+                                initial={{y:200}}
+                                whileInView={{y:0, transition:{duration:2.5, ease:"easeInOut"}}}
+                                viewport={{once: true}} 
+                                className="flex flex-col flex-1 bg-[#2D2D30] px-[30px] py-[50px] gap-[18px]">
                                 <div className="">
                                   <Image src={'/eco.png'} width={40} height={80} />
                                 </div>
@@ -225,7 +242,7 @@ const About = () => {
                                   Innovation isn’t just a buzzword—it’s a blueprint. We craft cutting-edge 
                                   digital solutions that help your business stay ahead of the curve.
                                 </div>
-                              </div>
+                              </motion.div>
                               <div className='absolute w-[371px] h-[66px] bg-[#B11A3D] z-[-1] bottom-[-28px] right-[-2%] translate-x-[-0%] flex items-center justify-center'>
 
                               </div>
