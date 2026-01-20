@@ -46,6 +46,7 @@ function AccordionItem({id, question, answer}) {
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.7, type: "spring"}}
+        viewport={{once: true}}
         >
         <div className='flex justify-between items-start cursor-pointer pt-[20px]' onClick={() => setIsOpen(!isOpen)}>
             <div className='flex items-center gap-2 justify-center font-bold relative'>
