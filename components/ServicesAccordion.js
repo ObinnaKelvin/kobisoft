@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 // next image
 import Image from "next/image";
@@ -55,7 +56,11 @@ const servicesData = [
 function AccordionItem({id, title, icon, description, tags}) {
   const [isOpen, setIsOpen] = React.useState(true); 
   return (
-    <div key={id} className={` flex flex-col gap-[25px] bg-[#2D2D30] rounded-[3em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}>
+    <motion.div 
+        initial={{y:200}}
+        whileInView={{y:0, transition:{duration:0.3, ease:"easeInOut"}}}
+        viewport={{once: true}} 
+        key={id} className={` flex flex-col gap-[25px] bg-[#2D2D30] rounded-[3em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}>
         <div className='flex justify-between items-start cursor-pointer pt-[20px]' onClick={() => setIsOpen(!isOpen)}>
             <div className='flex items-center gap-2 justify-center font-bold relative'>
                 <div>{icon}</div>
@@ -77,7 +82,7 @@ function AccordionItem({id, title, icon, description, tags}) {
                 <div key={`${tag}-${idx}`} className='bg-[#D9D9D950] rounded-[10px] w-max px-[10px] py-[4px]'>{tag}</div>
             ))}
         </div>
-    </div>)
+    </motion.div>)
 }
 
 function ServicesAccordion() {
