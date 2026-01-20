@@ -93,6 +93,7 @@ function WhyYouNeedUs() {
                             initial={{ y: 50 }}
                             whileInView={{ y: 0 }}
                             transition={{ duration: 0.7, type: "spring",  bounce: 0.25}}
+                            viewport={{once: true}}
                             >
                             <div className='flex flex-col gap-2.5'>
                                 {item.icon}
