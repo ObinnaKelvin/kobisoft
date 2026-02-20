@@ -13,7 +13,7 @@ const servicesData = [
        id: 1,
        title: 'Digital Marketing',
        icon: <Image src={'/aim.png'} width={35} height={35} />,
-       description: 'We don’t just do digital marketing—we champion it. From SEO to social, content to conversions, our expertise drives your brand forward on every front.' ,
+       description: 'We don’t just do digital marketing, we champion it. From SEO to social, content to conversions, our expertise drives your brand forward on every front.' ,
        tags: ['SEO', 'Market Trends', 'Facebook Ads', 'Google Ads', 'Blog Marketing', 'Email Marketing', 'Content Strategy']
     },
     {
@@ -60,24 +60,46 @@ function AccordionItem({id, title, icon, description, tags}) {
         initial={{y:200}}
         whileInView={{y:0, transition:{duration:0.3, ease:"easeInOut"}}}
         viewport={{once: true}} 
-        key={id} className={` flex flex-col gap-[25px] bg-[#2D2D30] rounded-[3em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}>
-        <div className='flex justify-between items-start cursor-pointer pt-[20px]' onClick={() => setIsOpen(!isOpen)}>
-            <div className='flex items-center gap-2 justify-center font-bold relative'>
+        key={id} className={` flex flex-col gap-[25px] 
+        bg-[#2D2D30] rounded-[3em] px-[15px] lg:px-[40px] xl:px-[40px] pb-[40px] 
+        xl:w-[80%]  w-full
+        transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[150px] lg:h-[80px] xl:h-[80px] mb-2'}`}>
+        <div className='flex justify-between items-start cursor-pointer py-[20px] lg:pt-[20px] xl:pt-[20px] ' onClick={() => setIsOpen(!isOpen)}>
+            <div className='flex flex-col lg:flex-row xl:flex-row 
+            items-left lg:items-center xl:items-center
+            gap-2 justify-center lg:justify-center xl:justify-center
+            font-bold 
+            xl:text-[35px]
+            lg:text-[35px]
+            md:text-[25px]
+            text-[15px]
+            relative '>
                 <div>{icon}</div>
                 <div>{title}</div>
                 {/* pane */}
-                <div className="bg-[#B11A3D] w-[30px] h-[3px] xl:w-[30px] xl:h-[3px] absolute left-11 bottom-0"></div>
+                <div className="bg-[#B11A3D] w-[30px] h-[3px] xl:w-[30px] xl:h-[3px] 
+                absolute left-0 lg:left-11 xl:left-11
+                -bottom-1 lg:bottom-0 xl:bottom-0"></div>
 
             </div>
             <div className={`transition-all duration-300 ${isOpen ? 'rotate-45' : ''} text-[40px] text-[#B11A3D]`}><HiOutlinePlus /></div>
         </div>
 
-        <div className={`pb-5 w-[400px] overflow-hidden transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 h-0'}`}>
+        <div className={`pb-5 
+            w-full xl:w-[400px] lg:w-[400px] 
+            overflow-hidden 
+            xl:text-[17px]
+            lg:text-[17px]
+            md:text-[15px]
+            text-[13px]
+            transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 h-0'}`}>
             <div>{description}</div>
         </div>
 
         {/* Tag Holder */}
-        <div className=' flex flex-wrap gap-2 w-[400px] text-sm  overflow-hidden'>
+        <div className=' flex flex-wrap gap-2 
+        w-full xl:w-[400px] lg:w-[400px]
+        text-sm  overflow-hidden'>
             {tags.map((tag, idx) => (
                 <div key={`${tag}-${idx}`} className='bg-[#D9D9D950] rounded-[10px] w-max px-[10px] py-[4px]'>{tag}</div>
             ))}
@@ -90,7 +112,7 @@ function ServicesAccordion() {
 
   return (
     <>
-        <div className='flex flex-col gap-3 items-center justify-center w-full xl:h-max py-[50px] '>
+        <div className='flex flex-col gap-3 items-center justify-center w-full xl:h-max py-[30px] xl:py-[50px] px-[20px] '>
             {servicesData.map((service) => (
                 <AccordionItem 
                     key={service.id}
