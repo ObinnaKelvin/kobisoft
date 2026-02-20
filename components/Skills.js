@@ -87,7 +87,9 @@ function Skills() {
             <Marquee pauseOnHover={true} gradient={false} speed={70} direction='right'>
                 {
                     tagsData.map((tag) => (
-                        <div key={tag.id} className='flex flex-row items-center gap-[10px] border-1 py-[20px] px-[50px] rounded-[3em] opacity-[60%] mx-[20px]'>
+                        <div key={tag.id} className='flex flex-row items-center gap-[10px] border-1 
+                        py-[10px] px-[30px] md:py-[20px] md:px-[50px] lg:py-[20px] lg:px-[50px] 
+                        rounded-[3em] opacity-[60%] mx-[20px]'>
                         {tag.icon} {tag.name}
                         </div>
                     ))
@@ -98,7 +100,9 @@ function Skills() {
             <Marquee pauseOnHover={true} gradient={false} speed={70} direction='left'>
                 {
                     tagsData.map((tag) => (
-                        <div key={tag.id} className='flex flex-row items-center gap-[10px] border-1 py-[20px] px-[50px] rounded-[3em] opacity-[60%] mx-[20px]'>
+                        <div key={tag.id} className='flex flex-row items-center gap-[10px] border-1 
+                        py-[10px] px-[30px] md:py-[20px] md:px-[50px] lg:py-[20px] lg:px-[50px] 
+                        rounded-[3em] opacity-[60%] mx-[20px]'>
                         {tag.icon} {tag.name}
                         </div>
                     ))
