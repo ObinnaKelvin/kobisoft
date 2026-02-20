@@ -83,7 +83,10 @@ const tagsData = [
 function Skills() {
   return (
     <div className='flex flex-col gap-[0px] w-full h-max'>
-        <div className='flex flex-row gap-[20px] w-full h-[130px] items-center justify-center'>
+        <div className='flex flex-row 
+        gap-[5px] xl:gap-[20px] lg:gap-[20px]
+        w-full h-[80px] xl:h-[130px] lg:h-[130px]
+        items-center justify-center'>
             <Marquee pauseOnHover={true} gradient={false} speed={70} direction='right'>
                 {
                     tagsData.map((tag) => (
@@ -96,7 +99,10 @@ function Skills() {
                 }
             </Marquee>
         </div>
-        <div className='flex flex-row gap-[20px] w-full h-[130px] items-center justify-center'>
+        <div className='flex flex-row 
+        gap-[5px] xl:gap-[20px] lg:gap-[20px]
+        w-full h-[80px] xl:h-[130px] lg:h-[130px]
+        items-center justify-center '>
             <Marquee pauseOnHover={true} gradient={false} speed={70} direction='left'>
                 {
                     tagsData.map((tag) => (
