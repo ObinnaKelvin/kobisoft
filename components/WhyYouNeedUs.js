@@ -64,9 +64,10 @@ function WhyYouNeedUs() {
 
 
   return (
-    <div className='bg-[#B11A3D] flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px] pt-[60px]'>
+    <div className='bg-[#B11A3D] flex flex-col h-max w-full gap-10 items-center justify-center pb-[60px] pt-[60px] px-[15px] '>
 
-        <div className="xl:w-[80%] flex flex-col items-center justify-center relative 
+        <div className="xl:w-[80%] w-full
+            flex flex-col items-center justify-center relative 
             gap-[20px]">
 
             {/* Title Wrapper */}
@@ -79,7 +80,7 @@ function WhyYouNeedUs() {
             mb-[40px]
             pt-[20px]
             '>
-                <div className="bg-[#ffffff] w-[50px] h-[5px] xl:w-[70px] xl:h-[5px]"></div>
+                <div className="bg-[#ffffff] w-[40px] h-[5px] xl:w-[70px] xl:h-[5px]"></div>
                 Why You Need Us ?
             </div>
 
@@ -89,7 +90,12 @@ function WhyYouNeedUs() {
                 needUsData.map((item) => (
                         <motion.div 
                             key={item.id} 
-                            className='flex flex-row xl:flex-row md:flex-col sm:flex-col justify-center items-center w-[80%] border-2 px-[50px] py-[40px] rounded-[3em]'
+                            className='flex flex-row xl:flex-row md:flex-col sm:flex-col justify-center items-center 
+                            w-full xl:w-[80%] lg:w-[80%]
+                            border-2 
+                            px-[10px] lg:px-[50px] xl:px-[50px]
+                            py-[40px] lg:py-[40px] xl:py-[40px]
+                            rounded-[3em] relative'
                             initial={{ y: 50 }}
                             whileInView={{ y: 0 }}
                             transition={{ duration: 0.7, type: "spring",  bounce: 0.25}}
@@ -97,14 +103,19 @@ function WhyYouNeedUs() {
                             >
                             <div className='flex flex-col gap-2.5'>
                                 {item.icon}
-                                <div className='text-[20px] font-semibold'>{item.title}</div>
-                                <div className='w-[60%]'>
+                                <div className='text-[17px] xl:text-[20px] lg:text-[20px] font-semibold'>{item.title}</div>
+                                <div className='text-[13px] xl:text-[16px] lg:text-[16px] w-full lg:w-[60%] xl:w-[60%]'>
                                    {item.description}
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-[-70px] w-[150px]'>
-                                <div className='text-[80px] font-bold'><CountUp end={item.stat} enableScrollSpy={true} duration={2}/><span className='text-[35px]'>{item.measure}</span></div>
-                                <div className='text-[20px] mt-[-25px]'>{item.statLabel}</div>
+                            <div className='flex flex-col gap-[-70px] w-[150px] 
+                            absolute 
+                            top-0 xl:top-0 lg:top-0
+                            -right-4 xl:right-14 lg:right-14
+                            '>
+                                <div className='text-[50px] xl:text-[80px] lg:text-[80px] font-bold'><CountUp end={item.stat} enableScrollSpy={true} duration={2}/><span className='text-[25px] xl:text-[35px] lg:text-[35px]'>{item.measure}</span></div>
+                                <div className='text-[17px] xl:text-[19px] lg:text-[19px]
+                                mt-[-25px]'>{item.statLabel}</div>
                             </div>
                         </motion.div>
 
