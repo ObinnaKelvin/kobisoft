@@ -251,7 +251,7 @@ export default function Home() {
 
           {/* Trusted By */}
 
-          <div className=" h-[400px] w-full flex flex-col items-center gap-10 p-[30px]">
+          <div className=" h-[200px] md:h-[300px] lg:h-[400px] w-full flex flex-col items-center gap-10 p-[30px]">
 
             {/* Title */}
             <div className="
