@@ -43,7 +43,7 @@ import Head from "next/head";
 
 //metadata
 export const metadata = {
-  title: "Kobisoft Digitals",
+  title: "Digital Marketing Agency in Lagos, Nigeria | Kobisoft Digitals",
   description: `At Kobisoft Digitals, we’re more than just a digital agency—we’re your growth partner. 
   🚀 We combine creativity, technology, and strategy to craft solutions that help brands stand out, connect with their audience, 
     and scale with confidence. We believe every business deserves a strong digital presence, and our mission is to transform ideas into powerful, 

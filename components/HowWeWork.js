@@ -45,7 +45,8 @@ function HowWeWork() {
 
     <div className='flex flex-row gap-[20px] w-full min-h-[100px] h-max items-center justify-center '>
 
-        <div className="xl:w-[80%] flex flex-col items-center justify-center relative 
+        <div className="xl:w-[80%] w-full
+        flex flex-col items-center justify-center relative 
             gap-[20px] "
             ref={ref}>
 
@@ -58,8 +59,9 @@ function HowWeWork() {
             text-[23px] w-[90%] 
             mb-[40px]
             pt-[20px]
+            
             '>
-                <div className="bg-[#B11A3D] w-[50px] h-[5px] xl:w-[70px] xl:h-[5px]" ></div>
+                <div className="bg-[#B11A3D] w-[40px] h-[5px] xl:w-[70px] xl:h-[5px]" ></div>
                 How We Work ?
             </div>
 
@@ -70,7 +72,8 @@ function HowWeWork() {
             style={{
                 scaleY: scrollYProgress
             }}
-            className='absolute  
+            className='hidden 
+            xl:absolute lg:absolute 
             xl:right-[18%]
             w-[4px] 
             h-[70%] 
@@ -80,11 +83,14 @@ function HowWeWork() {
                 workStepData.map((step, index) => (
 
                     <div key={step.id} 
-                        className='flex flex-row gap-[20px] w-[80%]'>
+                        className='flex flex-row gap-[20px] w-full xl:w-[80%] lg:w-[80%] 
+                        px-[15px] xl:px-[0px] lg:px-[0px]
+                        '>
 
-                        <div className='flex flex-col relative 
-                        py-[40px] px-[50px]
-                        w-[80%] xl:w-[80%]
+                        <div className='flex flex-col relative
+                        px-[30px] lg:px-[50px] xl:px-[50px]
+                        py-[40px] lg:py-[40px] xl:py-[40px]
+                        w-full xl:w-[80%] lg:w-[80%]
                         gap-[20px]
                         bg-[#2D2D30]
                         rounded-[3em]
@@ -93,11 +99,16 @@ function HowWeWork() {
                             <div className='font-thin'>
                                 {step.description}
                             </div>
-                            <div className='bg-[#1E1E1E] absolute w-[40px] h-[40px] right-12 rounded-[50%] flex items-center justify-center border-r-[#ffffff] '>{step.id}</div>
+                            <div className='bg-[#1E1E1E] absolute w-[40px] h-[40px] 
+                            right-5  xl:right-12  lg:right-12 
+                            rounded-[50%] flex items-center justify-center border-r-[#ffffff] '>{step.id}</div>
                           
 
                         </div>
-                        <div ref={secondRef} className='flex flex-col w-[20%] justify-center items-center  z-1'>
+                        <div ref={secondRef} className='hidden xl:flex lg:flex flex-col 
+                        w-[20%] 
+                        justify-center 
+                        items-center  z-1'>
                                 <div className='bg-[#2D2D30] flex flex-col py-[30px] px-[30px] rounded-[50%] z-1'>
                                     {step.icon}
                                 </div>
