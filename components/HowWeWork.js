@@ -73,6 +73,7 @@ function HowWeWork() {
                 scaleY: scrollYProgress
             }}
             className='hidden 
+            xl:block lg:block
             xl:absolute lg:absolute 
             xl:right-[18%]
             w-[4px] 
