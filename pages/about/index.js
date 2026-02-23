@@ -116,12 +116,12 @@ const About = () => {
   return (
       <>
           <Head>
-            <title>About Us - Kobisoft Digitals</title>
+            <title>About Kobisoft Digitals | Digital Marketing Agency in Lagos, Nigeria</title>
             <meta name="description" content="Learn more about Kobisoft Digitals, a leading digital solutions agency dedicated to creating impactful online experiences through creativity, strategy, and technology." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/siteicon.ico" />
           </Head>
-          <div className="flex flex-col h-max relative items-center justify-center top-0">
+          <div className="flex flex-col h-max relative items-center justify-center ">
 
                     {/* <div>We’re a digital solutions agency built for brands that want more than just an online presence—they want impact. 🚀
 
@@ -140,14 +140,14 @@ const About = () => {
                     {/* hero section */}
 
                     <div className="flex flex-col items-center bg-[#00000060] 
-                            xl:bg-[#00000060] gap-[20px] w-full  z-3 relative">
+                            xl:bg-[#00000060] gap-[20px] w-full z-3 relative px-[15px] lg:px-[0px] xl:px-[0px]">
 
                         <motion.div 
                             variants={fadeIn('down', 0.2)}
                             initial="hidden"
-                            className="flex flex-col gap-[20px] w-[80%] h-max z-3
-                            pl-[0px] pt-[50px] pr-[0px] pb-[50px] 
-                            xl:pl-[0px] xl:pt-[150px] xl:pr-[0px] xl:pb-[50px] "
+                            className="flex flex-col gap-[20px] w-full xl:w-[80%] lg:w-[80%] h-max z-3
+                            pl-[0px] pt-[100px] xl:pt-[150px] lg:pt-[150px] pr-[0px] pb-[50px] 
+                            xl:pl-[0px] xl:pr-[0px] xl:pb-[50px]"
                             animate="show"
                             exit="hidden">
 
@@ -169,13 +169,13 @@ const About = () => {
                             </div> */}
                         </motion.div>
 
-                        {/* Privacy terms Content */}
+                        {/* About Page Description Content */}
                         <motion.div 
                           initial={{y:200}}
                           whileInView={{y:0, transition:{duration:1.5, ease:"easeInOut"}}}
                           viewport={{once: true}}
-                          className='w-[80%] z-3 h-max gap-[20px] mt-[-70px]'>
-                                <div className='flex flex-col gap-3 my-[30px] bg-[#2D2D30] h-max rounded-[3em] px-[50px] py-[50px]'>
+                          className='w-full xl:w-[80%] lg:w-[80%] z-3 h-max gap-[20px] mt-[-70px]'>
+                                <div className='flex flex-col gap-3 my-[30px] bg-[#2D2D30] h-max rounded-[3em] px-[20px] xl:px-[50px] lg:px-[50px] py-[50px] xl:py-[50px] lg:py-[50px]'>
                                     {/* <div className='text-white font-semibold text-[20px]'>{refund.title}</div> */}
                                     <div className='text-white font-light text-[16px]'>
                                         We’re a digital solutions agency built for brands that want more than just an online presence but want impact.
@@ -186,7 +186,7 @@ const About = () => {
 
                         {/* Misson Statement */}
 
-                        <div className='flex flex-row w-[80%] z-3 gap-[30px] mt-[-20px] h-[310px] relative mb-[100px]'>
+                        <div className='flex flex-col xl:flex-row lg:flex-row w-full xl:w-[80%] lg:w-[80%]  z-3 gap-[30px] mt-[-20px] h-[310px] relative mb-[800px] xl:mb-[100px] lg:mb-[100px]  '>
                               <motion.div 
                                 initial={{y:200}}
                                 whileInView={{y:0, transition:{duration:2, ease:"easeInOut"}}}
@@ -243,7 +243,7 @@ const About = () => {
                                   digital solutions that help your business stay ahead of the curve.
                                 </div>
                               </motion.div>
-                              <div className='absolute w-[371px] h-[66px] bg-[#B11A3D] z-[-1] bottom-[-28px] right-[-2%] translate-x-[-0%] flex items-center justify-center'>
+                              <div className='absolute hidden lg:block xl:block w-[371px] h-[66px] bg-[#B11A3D] z-[-1] bottom-[-28px] right-[-2%] translate-x-[-0%] items-center justify-center'>
 
                               </div>
                         </div>

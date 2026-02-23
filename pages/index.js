@@ -162,7 +162,7 @@ export default function Home() {
 
     <>
           <Head>
-            <title>Home - Kobisoft Digitals</title>
+            <title>Digital Marketing Agency in Lagos, Nigeria | Kobisoft Digitals</title>
             <meta name="description" content="Kobisoft Digitals is a leading digital solutions agency dedicated to creating impactful online experiences through creativity, strategy, and technology." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/siteicon.ico" />

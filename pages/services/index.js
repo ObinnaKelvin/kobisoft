@@ -70,7 +70,7 @@ const Services = () => {
   return (
     <>
       <Head>
-        <title>Services - Kobisoft Digitals</title>
+        <title>Services Kobisoft Digitals | Digital Marketing Agency in Lagos, Nigeria</title>
         <meta name="description" content="Kobisoft Digitals offers a wide range of digital services including branding, design, development, copywriting, and SEO to help your business thrive online." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/siteicon.ico" />
