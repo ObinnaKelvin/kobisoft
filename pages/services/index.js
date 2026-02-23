@@ -93,8 +93,8 @@ const Services = () => {
                 variants={fadeIn('down', 0.2)}
                 initial="hidden"
                 className="flex flex-col gap-[20px] w-[80%] h-max z-3
-                pl-[0px] pt-[50px] pr-[0px] pb-[50px] 
-                xl:pl-[0px] xl:pt-[150px] xl:pr-[0px] xl:pb-[50px] "
+                pl-[0px] pt-[100px] xl:pt-[150px] lg:pt-[150px] pr-[0px] pb-[50px] 
+                xl:pl-[0px] xl:pr-[0px] xl:pb-[50px] "
                 animate="show"
                 exit="hidden">
 
