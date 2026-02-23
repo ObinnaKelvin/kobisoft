@@ -42,7 +42,7 @@ function AccordionItem({id, question, answer}) {
   return (
     <motion.div 
         key={id} 
-        className={` flex flex-col gap-[25px] border-2 rounded-[2em] px-[40px] pb-[40px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-[80px] mb-2'}`}
+        className={` flex flex-col gap-[25px] border-1 rounded-[2em] px-[40px] xl:px-[40px] lg:px-[40px] py-[10px] xl:w-[80%] transition-all duration-300 ${isOpen ? 'h-max mb-6' : 'h-max mb-2'}`}
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.7, type: "spring"}}
@@ -56,10 +56,12 @@ function AccordionItem({id, question, answer}) {
                 {/* <div className="bg-[#B11A3D] w-[30px] h-[3px] xl:w-[30px] xl:h-[3px] absolute left-11 bottom-0"></div> */}
 
             </div>
-            <div className={`transition-all duration-300 ${isOpen ? 'rotate-45' : ''} text-[40px] text-[#B11A3D]`}><HiOutlinePlus /></div>
+            <div className={`transition-all duration-300 ${isOpen ? 'rotate-45' : ''} text-[30px] lg:text-[40px] xl:text-[40px] text-[#B11A3D]`}><HiOutlinePlus /></div>
         </div>
 
-        <div className={`pb-5 w-[80%] overflow-hidden transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 h-0'}`}>
+        <div className={`pb-5 
+            w-[80%] 
+            overflow-hidden transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 h-0'}`}>
             <div>{answer}</div>
         </div>
 
@@ -71,7 +73,10 @@ function AccordionItem({id, question, answer}) {
 function Faq() {
   return (
     <>
-        <div className='flex flex-col gap-3 items-center justify-center w-[80%] mb-[80px]'>
+        <div className='flex flex-col gap-3 items-center justify-center 
+        w-full xl:w-[80%] lg:w-[80%] 
+        px-[15px] lg:px-[0px] xl:px-[0px]
+        mb-[80px] '>
             
 
             {/* Title Wrapper */}
