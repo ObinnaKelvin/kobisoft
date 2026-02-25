@@ -1,5 +1,6 @@
 import React from 'react'
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import Head from 'next/head';
 
 
 
